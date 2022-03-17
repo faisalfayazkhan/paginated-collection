@@ -26,7 +26,8 @@ See `AppServiceProvider.php` for a sample implementation.
 
 ### The subclass way
 
-Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `Collection.php` in your application and simply replace your `use Illuminate\Support\Collection` statements at the top of your dependent files with `use App\Support\CollectionPagination`:
+Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `Collection.php` in your application and simply replace your
+`use Illuminate\Support\Collection` statements at the top of your dependent files with    `use App\Support\CollectionPagination`:
 
 ```php
 namespace App\Http\Controllers;
