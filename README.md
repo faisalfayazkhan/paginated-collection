@@ -51,7 +51,7 @@ public function boot()
 
 ### The subclass way
 
-Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `CollectionPagination.php` in your application `App\Support` folder and simply replace your
+Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `CollectionPagination.php` in your application `App\Support` folder and simply replace your\
 `use Illuminate\Support\Collection` statements at the top of your dependent files with\
 `use App\Support\CollectionPagination`:
 
