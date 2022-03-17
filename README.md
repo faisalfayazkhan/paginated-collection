@@ -9,7 +9,7 @@
 
 ## About Paginated Collection
 
-The idea and code is copied from [here](https://gist.github.com/simonhamp/549e8821946e2c40a617c85d2cf5af5e#file-appserviceprovider-php).
+The idea and code is copied from [here](https://gist.github.com/simonhamp/549e8821946e2c40a617c85d2cf5af5e).
 
 
 ## Installation
@@ -26,8 +26,8 @@ See `AppServiceProvider.php` for a sample implementation.
 
 ### The subclass way
 
-Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `Collection.php` in your application and simply replace your
-`use Illuminate\Support\Collection` statements at the top of your dependent files with    `use App\Support\CollectionPagination`:
+Where you want a "pageable" collection that is distinct from the standard `Illuminate\Support\Collection`, implement a copy of `Collection.php` in your application and simply replace your\
+`use Illuminate\Support\Collection` statements at the top of your dependent files with\    `use App\Support\CollectionPagination`:
 
 ```php
 namespace App\Http\Controllers;
