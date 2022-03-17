@@ -22,7 +22,32 @@ There are 2 approaches.
 
 ### The `macro` way
 
-See `AppServiceProvider.php` for a sample implementation.
+Add the Collection macro to `AppServiceProvider.php`. That way you can call\
+`collectionPaginate()` on any collection:
+
+```php
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+
+
+public function boot()
+{
+    Collection::macro('collectionPaginate', function ($perPage, $total = null, $page = null, $pageName = 'page') {
+        $page = $page ?: LengthAwarePaginator::resolveCurrentPage($pageName);
+
+        return new LengthAwarePaginator(
+            $this->forPage($page, $perPage),
+            $total ?: $this->count(),
+            $perPage,
+            $page,
+            [
+                'path' => LengthAwarePaginator::resolveCurrentPath(),
+                'pageName' => $pageName,
+            ]
+        );
+    });
+}
+```
 
 ### The subclass way
 
