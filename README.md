@@ -7,10 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Paginated Collection
-
-The idea and code is copied from [here](https://gist.github.com/simonhamp/549e8821946e2c40a617c85d2cf5af5e).
-
 
 ## Installation
 
